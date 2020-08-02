@@ -1,0 +1,23 @@
+{
+  "name": "toast",
+  "version": "1.0.0",
+  "description": "toast插件",
+  "main": "index.js",
+  "scripts": {
+    "serve": "npx vue-cli-service serve",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx vue-cli-service build --target lib --name aa ./src/aa.vue"
+  },
+  "keywords": [
+    "vue"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@vue/cli-service": "^4.4.6",
+    "vue-template-compiler": "^2.6.11"
+  }
+}
