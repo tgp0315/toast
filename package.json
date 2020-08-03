@@ -1,5 +1,5 @@
 {
-  "name": "toast-vue",
+  "name": "toast2-vue",
   "version": "1.0.0",
   "description": "toast插件",
   "main": "dist/toast.umd.js",

@@ -4,19 +4,19 @@
 Install:
 
 ```
-npm install toast-vue -S
+npm install toast2-vue -S
 ```
 Import:
 
 ```javascript
-import 'toast-vue/dist/toast.css';
-import Toast from 'toast-vue';
+import 'toast2-vue/dist/toast.css';
+import Toast from 'toast2-vue';
 Vue.use(Toast);
 ```
 or
 ```javascript
-import 'toast-vue/dist/toast.css';
-import Toast from 'toast-vue';
+import 'toast2-vue/dist/toast.css';
+import Toast from 'toast2-vue';
 Vue.use(Toast, {
     type: 'center',
     duration: 3000,
