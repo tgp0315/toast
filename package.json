@@ -1,16 +1,20 @@
 {
-  "name": "toast",
+  "name": "toast-vue",
   "version": "1.0.0",
   "description": "toast插件",
-  "main": "index.js",
+  "main": "dist/toast.umd.js",
   "scripts": {
     "serve": "npx vue-cli-service serve",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx vue-cli-service build --target lib --name aa ./src/aa.vue"
+    "build": "npx vue-cli-service build --target lib --name toast ./src/index.js"
   },
   "keywords": [
     "vue"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tgp0315/toast.git"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
