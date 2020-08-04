@@ -1,6 +1,6 @@
 <template>
   <div> 
-    <div class="loading" v-if="loading">
+    <div class="zh-loading" v-if="loading">
       <svg v-if="loading"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="60px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
         <path opacity="0.2" fill="#fff" d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946
             s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634
@@ -10,10 +10,10 @@
             <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 20 20" to="360 20 20" dur="0.5s" repeatCount="indefinite"></animateTransform>
         </path>
       </svg>
-      <p>{{ tip }}</p>
+      <p class="zh-title">{{ tip }}</p>
     </div>
-    <div :class="['toast', {top: toastLocation === 'top', center: toastLocation === 'center'}]" v-if="isToast" :style="{width: operatewidth}">
-      <p>{{ toastTip }}</p>
+    <div :class="['zh-toast', {top: toastLocation === 'top', center: toastLocation === 'center'}]" v-if="isToast" :style="{width: operatewidth}">
+      <p class="zh-title">{{ toastTip }}</p>
     </div>
   </div>
 </template>
@@ -30,11 +30,8 @@ export default {
       toastLocation: "center"
     }
   },
-  created() {
-    // this.showToast("加载中...")
-  },
   methods: {
-    showLoading(tip) {
+    showLoading(tip = "") {
       this.loading = true;
       this.tip = tip;
     },
@@ -54,12 +51,7 @@ export default {
 </script>
 
 <style scoped>
-p {
-  padding: 0;
-  margin: 0;
-  /* word-break: break-all; */
-}
-.loading {
+.zh-loading {
   position: fixed;
   left: 50%;
   top: 50%;
@@ -73,7 +65,7 @@ p {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.7);
 }
-.toast {
+.zh-toast {
   position: fixed;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -86,10 +78,15 @@ p {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.7);
 }
-.toast.top {
+.zh-title {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+.zh-toast.top {
   top: 15%;
 }
-.toast.center {
+.zh-toast.center {
   top: 50%;
 }
 </style>
